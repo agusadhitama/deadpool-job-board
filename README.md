@@ -1,4 +1,4 @@
-# ☠ Deadpool Job Board
+# Deadpool Job Board
 
 > **Generator Poster Lowongan Kerja Mercenary** buat poster kontrak bergaya Deadpool / Marvel, download PNG, bagikan ke mana saja.
 
@@ -32,49 +32,6 @@ npm run dev
 ```
 
 Buka `http://localhost:5173` di browser.
-
----
-
-## Deploy ke GitHub Pages
-
-### Langkah 1 Ubah `homepage` di `package.json`
-```json
-"homepage": "https://agusadhitama.github.io/deadpool-job-board"
-```
-
-### Langkah 2 Ubah `base` di `vite.config.js`
-```js
-base: '/deadpool-job-board/',
-```
-
-### Langkah 3 Push ke GitHub
-```bash
-git init
-git remote add origin https://github.com/agusadhitama/deadpool-job-board.git
-git add .
-git commit -m "initial commit: deadpool job board"
-git push -u origin main
-```
-
-### Langkah 4 Deploy
-```bash
-npm run deploy
-```
-
-Perintah ini akan otomatis:
-1. Build project (`npm run build`)
-2. Push hasil build ke branch `gh-pages`
-
-### Langkah 5 Aktifkan GitHub Pages
-1. Buka repo di GitHub
-2. Klik **Settings** → **Pages**
-3. Source: pilih branch **`gh-pages`**, folder **`/ (root)`**
-4. Klik **Save**
-
-Tunggu 1–2 menit, lalu buka:
-```
-https://agusadhitama.github.io/deadpool-job-board
-```
 
 ---
 
