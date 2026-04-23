@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 20px;
+}
+
+.previewLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1D9E75;
+  animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.canvasFrame {
+  border: 1px solid #2a2a2a;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #0f0808;
+  line-height: 0;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #C41E2A;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 11px 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnPrimary:hover { background: #a01820; }
+.btnPrimary:active { transform: scale(0.97); }
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: transparent;
+  color: #888;
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding: 11px 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btnSecondary:hover {
+  border-color: #555;
+  color: #bbb;
+}
+
+.hint {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #444;
+  text-align: center;
+  letter-spacing: 0.03em;
+}

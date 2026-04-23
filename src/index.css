@@ -1,0 +1,120 @@
+/* ===== DEADPOOL JOB BOARD - by Agus Satria Adhitama ===== */
+
+:root {
+  --red: #C41E2A;
+  --red-dark: #8B0000;
+  --red-light: #E8232F;
+  --gold: #FFD700;
+  --gold-dim: #B8860B;
+  --black: #0D0D0D;
+  --black-2: #1a1a1a;
+  --black-3: #222;
+  --black-4: #2e2e2e;
+  --white: #F5F0E8;
+  --white-dim: #BDB5A6;
+  --font-display: 'Bangers', cursive;
+  --font-body: 'Special Elite', serif;
+  --font-ui: 'Oswald', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(196,30,42,0.03) 40px, rgba(196,30,42,0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(196,30,42,0.03) 40px, rgba(196,30,42,0.03) 41px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black-2); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 0; }
+
+/* Selection */
+::selection { background: var(--red); color: var(--white); }
+
+/* TYPOGRAPHY */
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.05em; }
+
+/* INPUTS & SELECTS */
+input, select, textarea {
+  background: var(--black-3);
+  border: 1px solid #444;
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--red);
+  background: var(--black-4);
+}
+
+input::placeholder { color: #555; }
+
+select option {
+  background: var(--black-3);
+  color: var(--white);
+}
+
+/* BUTTONS */
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.08em;
+  border: none;
+}
+
+button:active { transform: scale(0.97); }
+
+/* ANIMATIONS */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(196,30,42,0); }
+  50% { box-shadow: 0 0 20px 4px rgba(196,30,42,0.4); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-up { animation: slideUp 0.5s ease both; }

@@ -1,0 +1,129 @@
+.header {
+  border-bottom: 1px solid #1e1e1e;
+  background: #0d0d0d;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoMark {
+  width: 40px;
+  height: 40px;
+  background: #C41E2A;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #8B0000;
+}
+
+.logoX {
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
+  color: #FFD700;
+  line-height: 1;
+}
+
+.title {
+  font-family: 'Bangers', cursive;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 0.04em;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(29,158,117,0.1);
+  border: 1px solid rgba(29,158,117,0.3);
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #1D9E75;
+  letter-spacing: 0.06em;
+}
+
+.badgeDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #1D9E75;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.credit {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 0.03em;
+}
+
+.credit span {
+  color: #C41E2A;
+}
+
+.ticker {
+  background: #C41E2A;
+  border-top: 1px solid #8B0000;
+  overflow: hidden;
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.tickerInner {
+  white-space: nowrap;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+  .inner { padding: 14px 16px; }
+  .title { font-size: 22px; }
+  .right { display: none; }
+}

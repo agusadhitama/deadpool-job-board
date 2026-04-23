@@ -1,0 +1,33 @@
+.footer {
+  border-top: 1px solid #1e1e1e;
+  background: #0d0d0d;
+  margin-top: 40px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.copy {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #555;
+  text-align: center;
+}
+
+.copy span { color: #C41E2A; }
+.copy strong { color: #888; font-weight: normal; }
+
+.disclaimer {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #333;
+  text-align: center;
+  font-style: italic;
+}

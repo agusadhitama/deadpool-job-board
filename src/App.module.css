@@ -1,0 +1,102 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 24px 24px 40px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.topBarLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.topBarTitle {
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  line-height: 1;
+}
+
+.topBarSub {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 0.04em;
+}
+
+.resetBtn {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #555;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  padding: 7px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.resetBtn:hover {
+  border-color: #C41E2A;
+  color: #C41E2A;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.infoBar {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 14px 18px;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 3px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 0.03em;
+}
+
+.infoIcon {
+  color: #C41E2A;
+  flex-shrink: 0;
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .main { padding: 16px 14px 32px; }
+  .grid { grid-template-columns: 1fr; }
+  .infoBar { flex-direction: column; gap: 8px; }
+}
