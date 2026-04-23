@@ -86,6 +86,6 @@ Semua logika gambar poster ada di `src/hooks/usePoster.js`. Kamu bisa:
 
 ---
 
-*"Usaha Maksimal." - Wade Wilson*
+*"Maximum Effort" - Wade Wilson*
 
 *© 2026 Agus Satria Adhitama*
